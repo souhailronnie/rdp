@@ -20,7 +20,7 @@ steps:
                              -Name "SecurityLayer" -Value 0 -Force
 
           # Remove any existing rule with the same name to avoid duplication
-netshadvfirewall firewall delete rule name="RDP-Tailscale"
+netsh advfirewall firewall delete rule name="RDP-Tailscale"
 
           # For testing, allow any incoming connection on port 3389
 netshadvfirewall firewall add rule name="RDP-Tailscale" `
